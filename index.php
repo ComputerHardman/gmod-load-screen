@@ -1,11 +1,17 @@
 <?php
-require_once("config.php");
-$steamid = $_GET["steamid"];
-$api_url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=$STEAM_API_KEY&steamids=$steamid";
+require_once( "config.php" );
+// $steamid = isset($_GET["steamid"]);
+if ( isset( $_GET["steamid"] ) ) {
+	$steamid = $_GET["steamid"];
+} else {
+	$steamid = 76561197960435530;
+}
 
+
+$api_url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=$STEAM_API_KEY&steamids=$steamid";
 $resp = file_get_contents( $api_url );
 $resp_json = json_decode( $resp, true );
-$profile = ($resp_json["response"]["players"][0]);
+$profile = $resp_json["response"]["players"][0];
 
 ?>
 <!DOCTYPE html>
@@ -24,9 +30,9 @@ $profile = ($resp_json["response"]["players"][0]);
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       		rel="stylesheet">
 	</head>
-	<body style="background: url(<?php echo($BG_URL); ?>)">
+	<body style="background: url(<?php echo( $BG_URL ); ?>)">
 		<div class="container">
-			<h1 id="server-name">Server Name</h1>
+			<h1 id="server-name" class="<?php if ( $BG_IS_DARK ) { echo( "text-light" );} ?>">Server Name</h1>
 			<div class="float-left">
 				<div class="card mb-2">
 					<div class="card-header">
@@ -35,9 +41,12 @@ $profile = ($resp_json["response"]["players"][0]);
 						</i>
 						<b>Rules</b>
 					</div>
-					<ul class="list-group list-group-flush" id="rules-list">
-						<li class="list-group-item">Placeholder</li>
-						<li class="list-group-item">Placeholder</li>
+					<ul class="list-group list-group-flush">
+						<?php
+						foreach( $RULES as $rule ) {
+							echo("<li class='list-group-item'>$rule</li>");
+						}
+						?>
 					</ul>
 				</div>
 				<div class="card">
@@ -74,7 +83,7 @@ $profile = ($resp_json["response"]["players"][0]);
 					</li>
 				</ul>
 			</div>
-		<script src="config.js"></script>
+		</div>
 		<script src="static/js/load.js"></script>
 	</body>
 </html>
