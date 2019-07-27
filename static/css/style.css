@@ -30,7 +30,11 @@ body {
 	max-width: 300px;
 }
 
-
+#status {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
 
 .text-light {
 	color: white;

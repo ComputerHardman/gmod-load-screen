@@ -1,4 +1,3 @@
-// Spaghetti mess
 var s = document.getElementById( "server-name" );
 var statusc = document.getElementById( "status" );
 var body = document.getElementsByTagName( "body" )[0];
@@ -7,7 +6,7 @@ var map = document.getElementById( "map" );
 var gm = document.getElementById( "gamemode" );
 var mp = document.getElementById( "maxplayers" );
 
-body.style.backgroundRepeat = "no-repeat";
+body.style.backgroundRepeat = "repeat";
 body.style.backgroundSize = "cover";
 
 

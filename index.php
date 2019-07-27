@@ -58,22 +58,16 @@ $profile = $resp_json["response"]["players"][0];
 			<h2>
 				<b>Welcome!</b>
 			</h2>
-			<img class="card-img-top rounded-circle mx-auto my-2" style="width: 250px; float: right;" src="<?php echo($profile["avatarfull"])?>" alt="avatar">
-			<ul class="list-group list-group-flush">
-				<li class="list-group-item">
-					<i class="material-icons">
-						face
-					</i>
-					<b><?php echo($profile["personaname"])?></b>
-				</li>
-				<li class="list-group-item">
-					<i class="material-icons">
-						rowing
-					</i>
-					<span id="status">Loading...</span>
-				</li>
-			</ul>
+			<img style="width: 250px; float: right;" src="<?php echo($profile["avatarfull"])?>" alt="avatar">
+			<p>
+				<i class="material-icons">
+					face
+				</i>
+				<b><?php echo($profile["personaname"])?></b>
+			</p>
 		</div>
+		<div style="clear: both;"></div>
+		<p id="status" class="<?php if ( $BG_IS_DARK ) { echo( "text-light" );} ?>">Loading...</p>
 		<script src="static/js/load.js"></script>
 	</body>
 </html>
