@@ -5,11 +5,11 @@ $STEAM_API_KEY = "ABOOW";
 $BG_URL = "static/img/bg2.png";
 $BG_IS_DARK = true;
 $RULES = [
-    "Don't RDM!",
-    "Be respectful of other players.",
-    "Don't be an asshole.",
-    "Don't spam.",
-    "Don't cheat.",
-    "Have fun."
+  "Don't RDM!",
+  "Be respectful of other players.",
+  "Don't be an asshole.",
+  "Don't spam.",
+  "Don't cheat.",
+  "Have fun."
 ];
 
