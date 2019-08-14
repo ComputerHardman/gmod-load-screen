@@ -1,5 +1,5 @@
 <?php
-require_once( "config.php" );
+require_once("config.php");
 // $steamid = isset($_GET["steamid"]);
 if (isset($_GET["steamid"])) {
     $steamid = $_GET["steamid"];
@@ -25,7 +25,9 @@ $profile = $resp_json["response"]["players"][0];
         <link rel="stylesheet" href="static/css/style.css">
     </head>
     <body style="background: url(<?php echo($BG_URL); ?>)">
-        <h1 id="server-name" class="<?php if ($BG_IS_DARK) { echo("text-light");} ?>">Server Name</h1>
+        <h1 id="server-name" class="<?php if ($BG_IS_DARK) {
+    echo("text-light");
+} ?>">Server Name</h1>
         <div class="panel rule-panel">
             <h2>
                 <i class="material-icons">
@@ -35,7 +37,7 @@ $profile = $resp_json["response"]["players"][0];
             </h2>
             <ul>
                 <?php
-                foreach($RULES as $rule) {
+                foreach ($RULES as $rule) {
                     echo("<li>$rule</li>");
                 }
                 ?>
@@ -67,7 +69,9 @@ $profile = $resp_json["response"]["players"][0];
             </p>
         </div>
         <div style="clear: both;"></div>
-        <p id="status" class="<?php if ($BG_IS_DARK) { echo("text-light");} ?>">Loading...</p>
+        <p id="status" class="<?php if ($BG_IS_DARK) {
+                    echo("text-light");
+                } ?>">Loading...</p>
         <script src="static/js/load.js"></script>
     </body>
 </html>
