@@ -60,8 +60,8 @@ $profile = $resp_json["response"]["players"][0];
             <h2>
                 <b>Welcome!</b>
             </h2>
-            <img style="width: 250px; float: right;" src="<?php echo($profile["avatarfull"])?>" alt="avatar">
-            <p>
+            <img class="avatar" style="width: 250px; float: right;" src="<?php echo($profile["avatarfull"])?>" alt="avatar">
+            <p class="username">
                 <i class="material-icons">
                     face
                 </i>
