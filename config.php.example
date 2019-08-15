@@ -1,6 +1,6 @@
 <?php
 
-// RENAME THIS FOLDER TO config.php THEN REPLACE THIS KEY WITH YOUR OWN!
+// RENAME THIS FILE TO config.php THEN REPLACE THIS KEY WITH YOUR OWN!
 $STEAM_API_KEY = "ABOOW";
 $BG_URL = "static/img/bg2.png";
 $BG_IS_DARK = true;
