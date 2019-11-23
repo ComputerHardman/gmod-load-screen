@@ -1,7 +1,7 @@
 # gmod-load-screen
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wilsandbrink/gmod-load-screen)](https://github.com/wilsandbrink/gmod-load-screen/)
-[![GitHub repo size](https://img.shields.io/github/repo-size/wilsandbrink/gmod-load-screen)](https://github.com/wilsandbrink/gmod-load-screen/)
-[![GitHub](https://img.shields.io/github/license/wilsandbrink/gmod-load-screen)](https://github.com/wilsandbrink/gmod-load-screen/blob/master/LICENSE)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ComputerHardman/gmod-load-screen)](https://github.com/ComputerHardman/gmod-load-screen/)
+[![GitHub repo size](https://img.shields.io/github/repo-size/ComputerHardman/gmod-load-screen)](https://github.com/wilsandbrink/gmod-load-screen/)
+[![GitHub](https://img.shields.io/github/license/ComputerHardman/gmod-load-screen)](https://github.com/ComputerHardman/gmod-load-screen/blob/master/LICENSE)
 
 A loading screen for your gmod server.
 
